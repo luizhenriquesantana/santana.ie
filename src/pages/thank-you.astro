@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile } from '../data/profile';
+---
+
+<BaseLayout title={`Thank you | ${profile.name}`} description="Thanks for reaching out. Your message has been sent successfully.">
+  <section class="section thank-you-page">
+    <div class="section-heading">
+      <p class="eyebrow">Contact</p>
+      <h1>Thank you!</h1>
+      <p>Your message has been sent successfully. I’ll review it and get back to you as soon as possible.</p>
+      <a class="button" href="/">Back to home</a>
+    </div>
+  </section>
+</BaseLayout>

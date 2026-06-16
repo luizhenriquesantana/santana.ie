@@ -1,0 +1,78 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { profile } from '../../data/profile';
+
+const resume = await getEntry('resume', 'resume');
+
+if (!resume) {
+  throw new Error('Missing resume content entry.');
+}
+
+const { Content } = await render(resume);
+---
+
+<BaseLayout title={`${profile.name} | Resume`} description={`Resume for ${profile.name}, ${profile.role}.`}>
+  <main class="resume-page">
+    <header class="resume-header">
+      <a href="/">← Back home</a>
+      <a class="button button-small" href="/resume.pdf" download>Download PDF</a>
+    </header>
+    <article class="resume-document">
+      <h1>{resume.data.title}</h1>
+      <p class="resume-meta">
+        {resume.data.role} · {resume.data.location} · 
+        <button id="email-reveal" class="email-reveal-btn" title="Click to reveal email">
+          <span id="email-text">Reveal email</span>
+        </button>
+      </p>
+      <div class="resume-link-row">
+        <a href={resume.data.github} target="_blank" rel="noreferrer">GitHub</a>
+        <a href={resume.data.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <div class="highlight-list">
+        {resume.data.highlights.map((highlight) => <span>{highlight}</span>)}
+      </div>
+      <Content />
+    </article>
+  </main>
+</BaseLayout>
+
+<script is:inline define:vars={{ email: resume.data.email }}>
+  const emailButton = document.getElementById('email-reveal');
+  const emailText = document.getElementById('email-text');
+  let revealed = false;
+
+  if (emailButton && emailText) {
+    emailButton.addEventListener('click', () => {
+      if (!revealed) {
+        emailText.textContent = email;
+        emailButton.classList.add('revealed');
+        revealed = true;
+      } else {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  }
+</script>
+
+<style>
+  .email-reveal-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.revealed {
+      cursor: pointer;
+    }
+  }
+</style>

@@ -1,0 +1,22 @@
+{
+  "name": "santana-personal-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/generate-resume-pdf.mjs",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.9",
+    "astro": "^6.4.7",
+    "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1",
+    "yaml": "^2.9.0"
+  }
+}
