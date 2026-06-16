@@ -27,7 +27,6 @@ export const profile = {
   skills: {
     Backend: ['Java (JEE, Spring Boot)', 'REST APIs', 'SOAP', 'GraphQL', 'Microservices', 'Oracle', 'PostgreSQL', 'MySQL'],
     Frontend: ['Angular (v8–v19)', 'TypeScript', 'RxJS', 'HTML5', 'CSS/SASS', 'Component Architecture'],
-    Cloud: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'PCF', 'Jenkins', 'GitLab CI/CD'],
-    Engineering: ['TDD', 'SOLID Principles', 'Microservices Design', 'Security (OWASP)', 'Squad Leadership', 'Mentoring']
+    'Cloud & Engineering': ['AWS', 'Azure', 'Docker', 'Kubernetes', 'PCF', 'Jenkins', 'GitLab CI/CD', 'TDD', 'SOLID Principles', 'Microservices Design', 'Security (OWASP)', 'Squad Leadership', 'Mentoring']
   }
 };
