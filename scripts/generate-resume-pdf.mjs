@@ -27,12 +27,16 @@ async function findChrome() {
       // Try the next common browser path.
     }
   }
-  throw new Error('No Chrome/Chromium executable found. Set CHROME_PATH to generate resume.pdf.');
+  console.warn('Warning: No Chrome/Chromium executable found. Skipping PDF generation and using the existing file.');
+  return null;
 }
 
 await mkdir(dirname(outputPath), { recursive: true });
 
 const chrome = await findChrome();
+if (!chrome) {
+  process.exit(0);
+}
 
 await execFileAsync(chrome, [
   '--headless=new',
