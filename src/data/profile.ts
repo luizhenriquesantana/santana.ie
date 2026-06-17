@@ -2,7 +2,7 @@ export const profile = {
   name: 'Luiz Santana',
   initials: 'Luiz',
   role: 'Principal Software Engineer',
-  location: 'Dublin, Ireland',
+  location: 'Athlone, Co. Wesmeath, Ireland',
   email: 'luizhenriquesantana@gmail.com',
   domain: 'santana.ie',
   tagline: 'Principal Full-Stack Engineer architecting scalable microservices, modern SPAs, and leading high-performing engineering teams.',
@@ -16,7 +16,7 @@ export const profile = {
   seo: {
     title: 'Luiz Santana | Principal Software Engineer',
     description:
-      'Principal Full-Stack Engineer with 15+ years of experience in Java, Spring Boot, microservices, Angular, cloud architecture, and team leadership. Based in Dublin, Ireland.'
+      'Principal Full-Stack Engineer with 15+ years of experience in Java, Spring Boot, microservices, Angular, cloud architecture, and team leadership. Based in Athlone, Co. Westmeath, Ireland.'
   },
   focusAreas: [
     'Scalable microservices & cloud-native architecture',

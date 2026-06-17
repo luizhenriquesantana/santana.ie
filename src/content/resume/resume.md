@@ -1,7 +1,7 @@
 ---
 title: Luiz Henrique Santana
 role: Principal Software Engineer
-location: Dublin, Ireland
+location: Athlone, Co. Westmeath, Ireland
 email: luizhenriquesantana@gmail.com
 github: https://github.com/luizhenriquesantana
 linkedin: https://www.linkedin.com/in/luizhenriquesantana/
