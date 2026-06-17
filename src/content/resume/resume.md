@@ -30,7 +30,7 @@ Principal Full-Stack Engineer and Tech Lead with 15+ years of experience special
 
 ### Principal Software Engineer
 
-**Fidelity Investments, Dublin, Ireland | April 2026 – Present**
+**Fidelity Investments, Galway, Ireland | April 2026 – Present**
 
 - Architecting and developing Transfer of Assets application (SPS – Stock Plan Services, WI – Workplace Investment platform) handling high-volume financial transactions.
 - Building scalable Java/Spring Boot microservices with enterprise-grade reliability and security standards.
