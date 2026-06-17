@@ -8,15 +8,22 @@
     "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/generate-resume-pdf.mjs",
-    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
+    "preview": "npm run build && wrangler dev",
+    "generate-types": "wrangler types",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/cloudflare": "^13.7.0",
     "astro": "^6.4.7",
     "typescript": "^5.8.3"
   },
   "overrides": {
     "esbuild": "^0.28.1",
-    "yaml": "^2.9.0"
+    "yaml": "^2.9.0",
+    "vite": "^7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.101.0"
   }
 }
