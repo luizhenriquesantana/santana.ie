@@ -5,7 +5,12 @@ import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const printPath = join(root, 'dist', 'resume', 'print', 'index.html');
+let printPath = join(root, 'dist', 'client', 'resume', 'print', 'index.html');
+try {
+  await access(printPath);
+} catch {
+  printPath = join(root, 'dist', 'resume', 'print', 'index.html');
+}
 const outputPath = join(root, 'dist', 'resume.pdf');
 const publicOutputPath = join(root, 'public', 'resume.pdf');
 const execFileAsync = promisify(execFile);
