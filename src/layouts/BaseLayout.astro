@@ -48,3 +48,58 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://santana.ie'
     <slot />
   </body>
 </html>
+
+<script is:inline>
+  (function() {
+    const THEME_KEY = 'theme';
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const moonIcon = document.getElementById('theme-icon-moon');
+
+    function getPreferredTheme() {
+      const storedTheme = localStorage.getItem(THEME_KEY);
+      if (storedTheme) {
+        return storedTheme;
+      }
+      return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem(THEME_KEY, theme);
+      updateThemeIcon(theme);
+    }
+
+    function updateThemeIcon(theme) {
+      if (theme === 'light') {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    }
+
+    // Initialize theme
+    const initialTheme = getPreferredTheme();
+    setTheme(initialTheme);
+
+    // Add event listener to toggle button
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem(THEME_KEY)) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  })();
+</script>
