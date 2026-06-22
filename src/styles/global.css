@@ -1,15 +1,15 @@
 :root {
-  color-scheme: light;
-  --bg: #f8fbff;
-  --surface: #ffffff;
-  --surface-strong: #e8f1ff;
-  --ink: #1f2937;
-  --muted: #4b5563;
-  --line: #dfe7f4;
-  --accent: #2b55c5;
-  --accent-strong: #213f90;
-  --accent-soft: #d7e3fb;
-  --shadow: 0 24px 60px rgba(23, 42, 75, 0.12);
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #111111;
+  --surface-strong: #1f1f1f;
+  --ink: #f8fafc;
+  --muted: #94a3b8;
+  --line: #333333;
+  --accent: #e2e8f0;
+  --accent-strong: #ffffff;
+  --accent-soft: #1e293b;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
   --radius: 8px;
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -24,9 +24,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    linear-gradient(180deg, rgba(219, 233, 231, 0.7), rgba(247, 245, 240, 0) 380px),
-    var(--bg);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -52,9 +50,9 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 18px 0;
-  background: rgba(248, 251, 255, 0.95);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(172, 187, 217, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .brand {
@@ -77,6 +75,7 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: grayscale(100%);
 }
 
 /* removed .brand-fallback (header uses image only now) */
@@ -190,7 +189,7 @@ h3 {
   border-radius: var(--radius);
   padding: 11px 18px;
   background: var(--accent);
-  color: #fff;
+  color: #000000;
   font-weight: 750;
   text-decoration: none;
   transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
@@ -239,6 +238,7 @@ h3 {
 .portrait {
   z-index: 2;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .portrait:not([src]) {
@@ -278,7 +278,7 @@ h3 {
 .highlight-list span {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--accent-strong);
   padding: 9px 11px;
   font-weight: 700;
