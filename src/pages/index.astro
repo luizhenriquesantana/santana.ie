@@ -164,7 +164,7 @@ const { Content: ResumeContent } = await render(resume);
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 {profile.name}. Built with Astro.</p>
+    <p>© 2026 {profile.name}. Built with <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>.</p>
     <a href="/resume.pdf" download>Resume PDF</a>
   </footer>
 </BaseLayout>
@@ -203,7 +203,7 @@ const { Content: ResumeContent } = await render(resume);
 
       try {
         const formData = new FormData(form);
-        const response = await fetch('https://formspree.io/f/xaqzvbvl', {
+        const response = await fetch('https://formspree.io/f/xkolvqkb', {
           method: 'POST',
           headers: {
             Accept: 'application/json'
