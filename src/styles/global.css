@@ -103,7 +103,7 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
 }
 
 /* removed .brand-fallback (header uses image only now) */
@@ -293,7 +293,7 @@ h3 {
 .portrait {
   z-index: 2;
   object-fit: cover;
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
 }
 
 .portrait:not([src]) {
