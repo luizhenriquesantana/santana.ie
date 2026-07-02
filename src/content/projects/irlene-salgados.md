@@ -4,7 +4,9 @@ description: Institutional website for a small business in Contagem, MG, Brazil.
 tags:
   - Astro
   - Formspree
-  - Cloudflare Pages
+  - Cloudflare
+  - CSS
+  - JavaScript
 publicUrl: https://irlenesalgados.com.br
 featured: true
 order: 3
