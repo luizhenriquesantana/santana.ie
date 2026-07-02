@@ -5,7 +5,6 @@ tags:
   - Astro
   - Formspree
   - Cloudflare Pages
-sourceUrl: ''
 publicUrl: https://irlenesalgados.com.br
 featured: true
 order: 3
