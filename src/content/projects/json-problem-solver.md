@@ -8,6 +8,7 @@ tags:
   - Jackson
   - TDD
 sourceUrl: https://github.com/luizhenriquesantana/json-reader-v
+publicUrl: ''
 featured: false
 order: 2
 ---

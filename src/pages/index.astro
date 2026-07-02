@@ -88,7 +88,14 @@ const { Content: ResumeContent } = await render(resume);
               </div>
               <h3>{project.data.title}</h3>
               <p>{project.data.description}</p>
-              <a href={project.data.sourceUrl} target="_blank" rel="noreferrer">Visit</a>
+              <div class="project-links">
+                {project.data.publicUrl && (
+                  <a href={project.data.publicUrl} target="_blank" rel="noreferrer">Visit</a>
+                )}
+                {project.data.sourceUrl && (
+                  <a href={project.data.sourceUrl} target="_blank" rel="noreferrer">View source</a>
+                )}
+              </div>
             </article>
           ))
         }

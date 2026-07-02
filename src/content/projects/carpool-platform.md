@@ -8,6 +8,7 @@ tags:
   - PostGIS
   - RxJS
 sourceUrl: https://github.com/luizhenriquesantana/carpool
+publicUrl: ''
 featured: true
 order: 1
 ---

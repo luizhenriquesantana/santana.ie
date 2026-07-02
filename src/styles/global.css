@@ -368,6 +368,12 @@ h3 {
   font-weight: 800;
 }
 
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .tag-list,
 .skill-list,
 .highlight-list,
